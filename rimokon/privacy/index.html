@@ -29,13 +29,15 @@
 
   <h2>Data stored on your phone</h2>
   <ul>
-    <li>The address and name of your TV, and your settings (navigation mode, app shortcuts).</li>
-    <li>A connection key pair created by the app. Only its public part is sent to your TV, which asks you to allow it.</li>
+    <li>The address and name of your TV, and your settings (navigation mode).</li>
+    <li>A connection certificate created by the app and kept in Android's secure key storage. Your TV receives its public part when you pair them with the code shown on the TV.</li>
+    <li>The fingerprint of your TV's certificate, so that the app only connects to the TV you paired.</li>
+    <li>If you turn on USB debugging on your TV: a second key pair, whose public part is sent to your TV, which asks you to allow it.</li>
   </ul>
-  <p>This data never leaves your phone, except the public key sent to your TV. It is excluded from Android backups and deleted when you uninstall the app.</p>
+  <p>This data never leaves your phone, except the public parts sent to your TV. It is excluded from Android backups and deleted when you uninstall the app.</p>
 
   <h2>Local network</h2>
-  <p>To find your TV, the app looks for devices on your Wi-Fi network: it sends a discovery query (mDNS) and checks which devices accept connections on the debugging port (5555). It then talks to your TV directly over your local network. None of this information is sent to the developer or to any third party.</p>
+  <p>To find your TV, the app looks for devices on your Wi-Fi network: it sends a discovery query (mDNS) and checks which devices accept connections on the remote control port (6466) or the debugging port (5555). It then talks to your TV directly over your local network, through an encrypted connection. None of this information is sent to the developer or to any third party.</p>
 
   <h2>Tips</h2>
   <p>Optional tips are processed by Google Play. The developer does not receive your payment details. Google's privacy policy applies to these payments: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
@@ -66,13 +68,15 @@
 
     <h2>Données enregistrées sur votre téléphone</h2>
     <ul>
-      <li>L'adresse et le nom de votre TV, et vos réglages (mode de navigation, raccourcis d'applications).</li>
-      <li>Une paire de clés de connexion créée par l'application. Seule sa partie publique est envoyée à votre TV, qui vous demande de l'autoriser.</li>
+      <li>L'adresse et le nom de votre TV, et vos réglages (mode de navigation).</li>
+      <li>Un certificat de connexion créé par l'application et conservé dans le stockage sécurisé des clés d'Android. Votre TV en reçoit la partie publique lors de l'appairage avec le code qu'elle affiche.</li>
+      <li>L'empreinte du certificat de votre TV, pour que l'application ne se connecte qu'à la TV appairée.</li>
+      <li>Si vous activez le débogage USB sur votre TV : une seconde paire de clés, dont seule la partie publique est envoyée à votre TV, qui vous demande de l'autoriser.</li>
     </ul>
-    <p>Ces données ne quittent jamais votre téléphone, sauf la clé publique envoyée à votre TV. Elles sont exclues des sauvegardes Android et supprimées à la désinstallation de l'application.</p>
+    <p>Ces données ne quittent jamais votre téléphone, sauf les parties publiques envoyées à votre TV. Elles sont exclues des sauvegardes Android et supprimées à la désinstallation de l'application.</p>
 
     <h2>Réseau local</h2>
-    <p>Pour trouver votre TV, l'application recherche les appareils de votre réseau Wi-Fi : elle envoie une requête de découverte (mDNS) et vérifie quels appareils acceptent les connexions sur le port de débogage (5555). Elle communique ensuite directement avec votre TV sur votre réseau local. Aucune de ces informations n'est envoyée au développeur ni à un tiers.</p>
+    <p>Pour trouver votre TV, l'application recherche les appareils de votre réseau Wi-Fi : elle envoie une requête de découverte (mDNS) et vérifie quels appareils acceptent les connexions sur le port de télécommande (6466) ou le port de débogage (5555). Elle communique ensuite directement avec votre TV sur votre réseau local, par une connexion chiffrée. Aucune de ces informations n'est envoyée au développeur ni à un tiers.</p>
 
     <h2>Pourboires</h2>
     <p>Les pourboires facultatifs sont traités par Google Play. Le développeur ne reçoit pas vos informations de paiement. La politique de confidentialité de Google s'applique à ces paiements : <a href="https://policies.google.com/privacy?hl=fr">policies.google.com/privacy</a>.</p>
